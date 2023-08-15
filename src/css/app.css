@@ -1,0 +1,30 @@
+.app__container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.app__link {
+  max-width: 50px;
+  flex: 1;
+}
+
+.app__logo {
+  transition: transform 0.5s ease-in-out;
+}
+
+.app__logo:hover {
+  transform: scale(1.05);
+}
+
+.app__title {
+  font-size: 25px;
+  align-self: center;
+  flex: 1;
+}
+
+.app__content {
+  display: flex;
+  flex: 100%;
+  gap: 20px;
+}

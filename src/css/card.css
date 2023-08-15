@@ -1,0 +1,93 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  align-items: flex-start;
+  border-radius: 5px;
+  background-color: #ffffff;
+  cursor: grab;
+  transition: background-color 0.5s ease-in-out;
+}
+
+.dragged {
+  color: #d5dbde;
+  background-color: #d5dbde;
+}
+
+.dragged svg {
+  color: #d5dbde;
+}
+
+.card__close {
+  position: absolute;
+  display: none;
+  top: 2px;
+  right: 2px;
+  width: 25px;
+  height: 25px;
+  color: #526b78;
+  border-radius: 3px;
+  background-color: #eaedf2cc; 
+  transition: display, color, background-color 0.5s ease-in-out;
+}
+
+.card__close svg {
+  width: 10px;
+  margin: 0 auto;
+}
+
+.card:hover {
+  background-color: #f5f6f7;
+}
+
+.card:hover .card__close {
+  display: block;
+}
+
+.card__close:hover {
+  color: inherit;
+  background-color: #eaedef;
+}
+
+.card__new {
+  display: block;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  color: inherit;
+  resize: none;
+}
+
+.card__new::placeholder {
+  color: #80909a;
+}
+
+.card__new:focus::placeholder {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.card__new::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+.card__new::-webkit-scrollbar-button:start:decrement,
+.card__new::-webkit-scrollbar-button:end:increment  {
+  height: 1px;
+  background-color: transparent;
+}
+
+.card__new::-webkit-scrollbar-track-piece  {
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+.card__new::-webkit-scrollbar-thumb:vertical {
+  height: 5px;
+  background-color: #80909a;
+  border-radius: 5px;
+}

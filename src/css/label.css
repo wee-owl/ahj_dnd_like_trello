@@ -1,0 +1,40 @@
+.label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.label__description, 
+.label__attachment, 
+.label__comment, 
+.label__checklist, 
+.label__date {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  color: #80909a;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.label__description svg, 
+.label__attachment svg, 
+.label__comment svg, 
+.label__checklist svg, 
+.label__date svg {
+  width: 20px;
+  transition: color 0.2s ease-in-out;
+}
+
+.label__count {
+  transition: color 0.2s ease-in-out;
+}
+
+.label__description:hover, 
+.label__attachment:hover, 
+.label__comment:hover, 
+.label__checklist:hover, 
+.label__date:hover {
+  color: inherit;
+}

@@ -1,0 +1,89 @@
+.task__section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-wrap: wrap;
+  min-width: 200px;
+  max-width: 400px;
+  width: 100%;
+  margin: 0;
+  padding: 10px;
+  flex: 1;
+  align-self: flex-start;
+  border-radius: 5px;
+  background-color: #dee2e5;
+}
+
+.task__header {
+  display: flex;
+  align-items: center;
+}
+
+.task__title {
+  align-self: center;
+  flex: 1;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.task__control svg {
+  width: 20px;
+  margin-left: auto;
+  color: #80909a;
+  transition: color 0.5s ease-in-out;
+}
+
+.task__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task__add-textarea {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  align-self: flex-start;
+  padding: 10px 0 0 5px;
+  color: #80909a;
+  cursor: pointer;
+  transition: color 0.5s ease-in-out;
+}
+
+.task__add-textarea svg {
+  width: 15px;
+}
+
+.task__add-block {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 100%;
+}
+
+.task__add-card {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #5ca84d;
+  color: #ffffff;
+  line-height: 1;
+  text-transform: capitalize;
+  box-shadow: 0 2px #426d2c;
+}
+
+.task__add-card:active:enabled {
+  box-shadow: 0 1px #426d2c;
+  transform: translateY(1px);
+}
+
+.task__not-add-card svg {
+  width: 15px;
+  color: #80909a;
+  transition: color 0.5s ease-in-out;
+}
+
+.task__control svg:hover, 
+.task__add-textarea:hover, 
+.task__not-add-card:hover svg {
+  color: inherit;
+}
