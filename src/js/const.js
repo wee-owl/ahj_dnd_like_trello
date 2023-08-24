@@ -1,4 +1,4 @@
-const COLUMN_HEADER = ['to do', 'in progress', 'done'];
+const COLUMNS_HEADERS = ['to do', 'in progress', 'done'];
 const LOGO_SVG = `
   <svg height="800px" width="800px" viewBox="0 0 380.681 380.681">
     <g>
@@ -114,6 +114,6 @@ const DATE = `
 `;
 
 export {
-  COLUMN_HEADER, LOGO_SVG, ELLIPSIS_SVG, ADD_SVG, CLOSE_SVG,
+  COLUMNS_HEADERS, LOGO_SVG, ELLIPSIS_SVG, ADD_SVG, CLOSE_SVG,
   DESC_SVG, ATTACHMENT, COMMENT, CHECKLIST, DATE,
 };
