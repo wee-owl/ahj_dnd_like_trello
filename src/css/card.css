@@ -11,13 +11,15 @@
   transition: background-color 0.5s ease-in-out;
 }
 
-.dragged {
-  color: #d5dbde;
-  background-color: #d5dbde;
+.card-active {
+  position: absolute;
+  pointer-events: none;
+  transform: rotate(3deg);
+  z-index: 999;
 }
 
-.dragged svg {
-  color: #d5dbde;
+.card-bg {
+  background-color: #d5dbde;
 }
 
 .card__close {

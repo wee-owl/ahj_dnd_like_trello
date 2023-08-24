@@ -1,11 +1,9 @@
-import { COLUMN } from './const';
-import BaseSpace from './renderBasic';
-import getStorage from './getStorage';
+import { COLUMN_HEADER } from './const';
+import Desk from './Desk';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const data = JSON.parse(localStorage.getItem('data')) || 0;
-  const appContainer = document.querySelector('.app__container');
-  const newContent = new BaseSpace(appContainer, COLUMN, data);
-  newContent.viewBaseSpace();
+  const storage = localStorage.getItem('list') || 0;
+  const container = document.querySelector('body');
+  const desk = new Desk(container, COLUMN_HEADER, storage);
+  desk.init();
 });
-document.addEventListener('change', getStorage);

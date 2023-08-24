@@ -1,5 +1,5 @@
-export const COLUMN = ['to do', 'in progress', 'done'];
-export const LOGO_SVG = `
+const COLUMN_HEADER = ['to do', 'in progress', 'done'];
+const LOGO_SVG = `
   <svg height="800px" width="800px" viewBox="0 0 380.681 380.681">
     <g>
       <path style="fill:#333E48;" d="M93.563,342.613c15.387,15.387,40.329,15.387,55.715,0c15.385-15.385,15.385-40.33-0.002-55.714   l-79.982-79.982c-30.769,30.768-30.77,80.655,0,111.427L93.563,342.613z"/>
@@ -42,33 +42,33 @@ export const LOGO_SVG = `
     </g>
   </svg>
 `;
-export const ELLIPSIS_SVG = `
+const ELLIPSIS_SVG = `
   <svg viewBox="0 0 408 408" role="img" aria-label="Svg button image" fill="currentColor">
     <g>
       <path d="M51,153c-28.05,0-51,22.95-51,51s22.95,51,51,51s51-22.95,51-51S79.05,153,51,153z M357,153c-28.05,0-51,22.95-51,51    s22.95,51,51,51s51-22.95,51-51S385.05,153,357,153z M204,153c-28.05,0-51,22.95-51,51s22.95,51,51,51s51-22.95,51-51    S232.05,153,204,153z"/>
     </g>
   </svg>
 `;
-export const ADD_SVG = `
+const ADD_SVG = `
   <svg viewBox="0 0 286.376 286.376" role="img" aria-label="Svg button image" fill="currentColor">
     <g>
       <path d="M268.477,125.29H161.086V17.899c0-9.885-8.013-17.898-17.898-17.898   s-17.898,8.013-17.898,17.898v107.39H17.9c-9.885,0-17.9,8.013-17.9,17.898c0,9.885,8.015,17.898,17.9,17.898h107.39v107.39   c0,9.885,8.013,17.898,17.898,17.898s17.898-8.013,17.898-17.898v-107.39h107.391c9.885,0,17.898-8.014,17.898-17.898   C286.376,133.303,278.362,125.29,268.477,125.29z"/>
     </g>
   </svg>
 `;
-export const CLOSE_SVG = `
+const CLOSE_SVG = `
   <svg viewBox="0 0 212.982 212.982" role="img" aria-label="Svg close image" fill="currentColor">
     <g>
       <path d="M131.804,106.491l75.936-75.936c6.99-6.99,6.99-18.323,0-25.312   c-6.99-6.99-18.322-6.99-25.312,0l-75.937,75.937L30.554,5.242c-6.99-6.99-18.322-6.99-25.312,0c-6.989,6.99-6.989,18.323,0,25.312   l75.937,75.936L5.242,182.427c-6.989,6.99-6.989,18.323,0,25.312c6.99,6.99,18.322,6.99,25.312,0l75.937-75.937l75.937,75.937   c6.989,6.99,18.322,6.99,25.312,0c6.99-6.99,6.99-18.322,0-25.312L131.804,106.491z"/>
     </g>
   </svg>
 `;
-export const DESC_SVG = `
+const DESC_SVG = `
   <svg width="24" height="24" viewBox="0 0 24 24" role="img" aria-label="Svg description image" fill="currentColor">
     <path d="M14 17H4v2h10v-2zm6-8H4v2h16V9zM4 15h16v-2H4v2zM4 5v2h16V5H4z"/>
   </svg>
 `;
-export const ATTACHMENT = `
+const ATTACHMENT = `
   <li class="label__attachment label__icon">
     <svg viewBox="0 0 98.371 98.371" role="img" aria-label="Svg attachment image" fill="currentColor">
       <g>
@@ -78,7 +78,7 @@ export const ATTACHMENT = `
     <p class="label__count">2</p>
   </li>
 `;
-export const COMMENT = `
+const COMMENT = `
   <li class="label__comment label__icon">
     <svg viewBox="0 0 32 32" role="img" aria-label="Svg comment image" fill="currentColor">
       <g>
@@ -88,7 +88,7 @@ export const COMMENT = `
     <p class="label__count">1</p>
   </li>
 `;
-export const CHECKLIST = `
+const CHECKLIST = `
   <li class="label__checklist label__icon">
     <svg viewBox="0 0 512 512" role="img" aria-label="Svg checklist image" fill="currentColor">
       <g>
@@ -101,9 +101,7 @@ export const CHECKLIST = `
     <p class="label__count">1/3</p>
   </li>
 `;
-const currDate = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric' }).format(Date.now());
-const curDateTime = `${new Date().getFullYear()}-${new Date().getMonth()}-${new Date().getDate()}T${new Date().getHours()}:${new Date().getMinutes()}`;
-export const DATE = `
+const DATE = `
   <li class="label__date label__icon">
     <svg viewBox="0 0 32 32" role="img" aria-label="Svg date image" fill="currentColor">
       <g>
@@ -111,6 +109,11 @@ export const DATE = `
         <path d="M21.5,22.5a1,1,0,0,1-.71-.29l-5.5-5.5A1,1,0,0,1,15,16V8a1,1,0,0,1,2,0v7.59l5.21,5.2a1,1,0,0,1,0,1.42A1,1,0,0,1,21.5,22.5Z"/>
       </g>
     </svg>
-    <time class="label__count" datetime="${curDateTime}">${currDate}</time>
+    <time class="label__count" datetime=""></time>
   </li>
 `;
+
+export {
+  COLUMN_HEADER, LOGO_SVG, ELLIPSIS_SVG, ADD_SVG, CLOSE_SVG,
+  DESC_SVG, ATTACHMENT, COMMENT, CHECKLIST, DATE,
+};
