@@ -1,4 +1,27 @@
-## Like Trello
-[![Build status](https://ci.appveyor.com/api/projects/status/8mpgumky190ob8xa?svg=true)](https://ci.appveyor.com/project/wee-owl/like-trello)
+# [Like Trello](https://wee-owl.github.io/ahj_dnd_like_trello)  
 
-[Link to Like-Trello app](https://wee-owl.github.io/ahj_dnd_like_trello)
+[![Build status](https://ci.appveyor.com/api/projects/status/8mpgumky190ob8xa?svg=true)](https://ci.appveyor.com/project/wee-owl/like-trello)  
+
+Like Trello - это задание [Нетологии](https://netology.ru/) по созданию внутрикорпоративной системы управления задачами, аналогичной Trello.  
+Возможности приложения: добавлять карточки в три колонки, перемещать карточки между колонками, удалять карточки.  
+Данные о состоянии хранятся в Local Storage.  
+
+<img src="https://github.com/wee-owl/ahj_dnd_like_trello/assets/95621680/468f0ab0-42a2-4e4c-8c73-4fb8de86e837" width="500" height="">
+
+## Технологии
+- JavaScript
+- HTML
+- CSS
+- Webpack
+- Webpack loaders
+
+## Реализованная функциональность
+- фиксированное количество колонок
+- добавление карточек с помощью кнопки `Add another card`
+- удаление карточек (при наведении на карточку появляется иконка крестик)
+- перемещение карточек как внутри колонки, так и между колонками:
+  - в момент захвата (grabbing) карточка удаляется из своего начального положения
+  - при переносе карточка имеет угол наклона
+  - при наведении на другие позиции под карточку выделяется место по высоте равное размеру самой карточке
+- состояние хранится в Local Storage, при обновлении страницы изменения сохраняются
+- постоение DOM-дерева производится на базе состояния, хранящегося в LocalStorage
